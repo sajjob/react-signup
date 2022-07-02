@@ -1,0 +1,21 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "admin",
+      "firstname": "admin",
+      "lastname": "admini",
+      "email": "admin@gmail.com",
+      "phonNumber": "099999999999",
+      "password": "123",
+      "term": "true"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "username": "ali",
+      "password": "123"
+    }
+  ]
+}

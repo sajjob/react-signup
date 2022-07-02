@@ -1,0 +1,53 @@
+$modalBackground: rgba(0, 0, 0, 0.6);
+$modalMainBackground: rgb(221, 221, 221);
+$modalMainTransform: translate(-50%, -50%);
+$closeBtnBackground: transparent;
+$closeBtnPosition: absolute;
+$closeColor: #ff605c;
+$hoverCloseColor: #e13223;
+
+.modal-me {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $modalBackground;
+}
+
+.modal-main-me {
+  position: fixed;
+  background: $modalMainBackground;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: $modalMainTransform;
+  border-radius: 8px;
+}
+
+.display-block-me {
+  display: block;
+}
+
+.display-none-me {
+  display: none;
+}
+
+.close-btn-me {
+  background-color: $closeBtnBackground;
+  border: none;
+  right: 0;
+  position: $closeBtnPosition;
+  top: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+.close-me {
+  border-radius: 10px;
+  color: $closeColor;
+}
+.close-me:hover {
+  color: $hoverCloseColor;
+}

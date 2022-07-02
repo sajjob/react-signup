@@ -1,0 +1,53 @@
+.dash-header {
+  position: relative;
+  height: 15vh;
+  background-color: #67676c;
+}
+
+.logout-btn {
+  background-color: #4b4b4e;
+  color: rgb(211, 211, 211);
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  float: right;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.logout-btn:hover {
+  background-color: #14141d;
+}
+.dashboard-container {
+  margin: auto 100px;
+}
+.dashboard-message {
+  color: #14141d;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+.dashboard-ifno {
+  color: #323236;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f1f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.dashboard-input {
+  padding: 10px;
+
+  input {
+    margin: 5px auto;
+    font-size: 20px;
+    border: 1px solid #4b4b4e;
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+.edit-btn {
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
