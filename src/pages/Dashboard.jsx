@@ -1,22 +1,21 @@
 import React, { useContext } from "react";
 
-import "./DashStyles.scss";
-import RegisterContext from "../context/registerContext";
+import "./DashStyle.scss";
+import signupContext from "../context/signupContext";
 
 const Dashboard = () => {
-  const { setIsSignin, logUser } = useContext(RegisterContext);
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
+  const { setIsSignup, formData, setActiveStepIndex } =
+    useContext(signupContext);
 
   return (
     <div>
       <div className="dash-header">
         <button
           className="logout-btn"
-          onClick={() => setIsSignin(false)}
+          onClick={() => {
+            setActiveStepIndex(0);
+            setIsSignup(false);
+          }}
         >
           Logout
         </button>
@@ -25,27 +24,19 @@ const Dashboard = () => {
       <div className="dashboard-container">
         <div className="dashboard-message">
           <h2>Welcome </h2>
-          <h4 style={{ color: "red" }}>{logUser.username}</h4>
+          <h4 style={{ color: "red" }}>{formData.name}</h4>
         </div>
         <div className="dashboard-ifno">
           <h3>Edit Your Profile</h3>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div className="dashboard-input">
-              <label htmlFor="email">Email </label><br />
+              <label htmlFor="email">Email </label>
+              <br />
               <input
                 type="text"
                 name="email"
                 placeholder="Email"
-                value={logUser.email}
-              />
-            </div>
-            <div className="dashboard-input">
-              <label htmlFor="password">Password </label><br />
-              <input
-                type="text"
-                name="password"
-                placeholder="Password"
-                value={logUser.password}
+                value={formData.email}
               />
             </div>
             <button className="edit-btn">Edit</button>

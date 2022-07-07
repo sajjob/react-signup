@@ -1,13 +1,21 @@
+import "./Modal.scss";
+import { AiFillCloseSquare } from "react-icons/ai";
 import { useContext } from "react";
-import Modal from "../components/UI/Modal";
 
-//use in Signup.jsx for "Signup Modal 'Terms of Services' "
-export const modal = () => {
+import signupContext from "../../context/signupContext";
+
+const Modal = () => {
+  const { showModal, cancelModal } = useContext(signupContext);
+
+  const showHideClassName = showModal
+    ? "modal-me display-block-me"
+    : "modal-me display-none-me";
+
   return (
-    <>
-      <Modal>
+    <div className={showHideClassName}>
+      <section className="modal-main-me">
         <div style={{ textAlign: "center", padding: "10px" }}>
-          <h1>This is our Terms Services</h1>
+          <h1>This is our Terms of Service</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
             error molestiae necessitatibus tenetur facilis qui quod, officiis id
@@ -21,8 +29,12 @@ export const modal = () => {
             quam nulla fugit. Rerum, animi.
           </p>
         </div>
-      </Modal>
-    </>
+        <button className="close-btn-me" type="button" onClick={cancelModal}>
+          <AiFillCloseSquare className="close-me" />
+        </button>
+      </section>
+    </div>
   );
 };
 
+export default Modal;
